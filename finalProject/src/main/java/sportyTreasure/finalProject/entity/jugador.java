@@ -11,19 +11,19 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Actividad{
+public class Jugador {
     private Long id;
-    private String actividad;
-    private String descripcion;
-    private int puntaje;
+    private String contrasenia;
+    private String nombre;
+    private int edad;
+    private Long telefono;
+    private String correo;
+    private String geolocalizacion;
 
-    public boolean validarPuntaje(){
-        if(puntaje>=6){
-            return true;
-        }
-        else{
-            return false;
-        }
+    public void iniciarSesion(){
+
     }
+    public void cerrarSesion(){
 
+    }
 };

@@ -12,5 +12,13 @@ import javax.persistence.*;
 @AllArgsConstructor
 public class Pista{
     private Long id;
-    private String descripcion;
+    private String acertijo;
+    private String respuesta;
+    private String ubicación;
+    public String ubicaciónSiguiente(){
+        return ubicación;
+    }
+    public boolean validarRespuesta(){
+        return respuesta;
+    }
 }

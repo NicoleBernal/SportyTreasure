@@ -14,8 +14,12 @@ import javax.persistence.*;
 public class Estacion{
     private long id;
     private String nombre;
-    private String description;
-    Pista pista;
+    private String descripcion;
+    private Pista pista;
     private Actividad actividad;
     private String geolocalización;
+
+    public Actividad siguienteActividad() {
+        return actividad;
+    }
 }
