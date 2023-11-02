@@ -11,10 +11,15 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name="actividades")
 public class Actividad{
+    @Id
     private Long id;
+    @Column
     private String actividad;
+    @Column
     private String descripcion;
+    @Column
     private int puntaje;
 
     public boolean validarPuntaje(){
@@ -25,5 +30,6 @@ public class Actividad{
             return false;
         }
     }
+
 
 };

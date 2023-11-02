@@ -11,15 +11,21 @@ import javax.persistence.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Estacion{
-    private long id;
+@Table(name="estaciones")
+public class Estacion {
+    @Id
+    private Long id;
+    @Column
     private String nombre;
+    @Column
     private String descripcion;
-    private Pista pista;
+    @Column
+    private String geolocalizacion;
+    @OneToOne
     private Actividad actividad;
-    private String geolocalización;
 
-    public Actividad siguienteActividad() {
+    public Actividad siguienteActividad(){
         return actividad;
     }
+
 }

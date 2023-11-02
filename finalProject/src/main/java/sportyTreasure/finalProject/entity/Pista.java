@@ -3,6 +3,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.stereotype.Controller;
 
 import javax.persistence.*;
 
@@ -10,15 +11,19 @@ import javax.persistence.*;
 @Getter
 @Setter
 @AllArgsConstructor
-public class Pista{
+@NoArgsConstructor
+@Table(name="pistas")
+public class Pista {
+    @Id
     private Long id;
+    @Column
     private String acertijo;
+    @Column
     private String respuesta;
-    private String ubicación;
-    public String ubicaciónSiguiente(){
-        return ubicación;
-    }
+    @Column
+    private String ubicacionSig;
+
     public boolean validarRespuesta(){
-        return respuesta;
+        return true;
     }
 }
