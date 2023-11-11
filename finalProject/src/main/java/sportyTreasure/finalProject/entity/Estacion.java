@@ -23,6 +23,9 @@ public class Estacion {
     private String geolocalizacion;
     @OneToOne
     private Actividad actividad;
+    @OneToOne
+    private Pista pista;
+
 
     public Actividad siguienteActividad(){
         return actividad;

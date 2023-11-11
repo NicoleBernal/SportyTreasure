@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import  lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -28,6 +29,8 @@ public class Jugador {
     private String correo;
     @Column
     private String geolocalizacion;
+    @OneToMany
+    private List<Estacion> estaciones;
 
     public void iniciarSesion(){
 
