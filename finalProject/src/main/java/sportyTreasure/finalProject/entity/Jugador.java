@@ -1,9 +1,6 @@
 package sportyTreasure.finalProject.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.AllArgsConstructor;
-import  lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,14 +10,20 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Table(name="jugadores")
 public class Jugador {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column
     private String contrasenia;
     @Column
     private String nombre;
+    @Column
+    private String apellido;
+    @Column
+    private String usuario;
     @Column
     private  int edad;
     @Column
