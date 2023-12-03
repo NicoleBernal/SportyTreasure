@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Actividad{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id_actividad;
     @Column
     private String actividad;
     @Column

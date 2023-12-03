@@ -14,7 +14,7 @@ import javax.persistence.*;
 public class Pista {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long id_pista;
     @Column
     private String acertijo;
     @Column

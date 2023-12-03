@@ -11,7 +11,7 @@ window.addEventListener('load',function (){
             contrasenia:document.getElementById("contrasenia"),
         }
 
-        const url='/jugadores';
+        const url='/usuario';
         const settings={
             method:'POST',
             headers:{

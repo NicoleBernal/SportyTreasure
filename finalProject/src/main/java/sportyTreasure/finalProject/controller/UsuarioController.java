@@ -6,17 +6,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import sportyTreasure.finalProject.entity.Jugador;
-import sportyTreasure.finalProject.service.JugadorService;
+import sportyTreasure.finalProject.entity.Usuario;
+import sportyTreasure.finalProject.service.UsuarioService;
 
 @RestController
-@RequestMapping("/jugadores")
-public class JugadoresController {
+@RequestMapping("/usuario")
+public class UsuarioController {
     @Autowired
-    JugadorService jugadorService;
+    UsuarioService usuarioService;
 
     @PostMapping
-    public ResponseEntity<Jugador> registrarJugador(@RequestBody Jugador jugador){
-        return ResponseEntity.ok(jugadorService.guardarjugador(jugador));
+    public ResponseEntity<Usuario> registrarJugador(@RequestBody Usuario usuario){
+        return ResponseEntity.ok(usuarioService.guardarjugador(usuario));
     }
 }
