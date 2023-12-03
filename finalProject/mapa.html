@@ -25,14 +25,18 @@
                 data.addColumn('number', 'Latitud');
                 data.addColumn('number', 'Longitud');
                 data.addColumn('string', 'Nombre');
+                data.addColumn({type: 'string', role: 'style'})
 
               bri  // Agregar la ubicación del usuario al conjunto de datos
-                data.addRow([userLat, userLng, 'Tu Ubicación']);
+                data.addRow([userLat, userLng, 'Tu Ubicación','blue']);
 
                 // Puedes agregar más ubicaciones aquí si es necesario
-                data.addRow([19.0760, 72.8777, 'Mumbai']);
-                data.addRow([18.5204, 73.8567, 'Pune']);
-                data.addRow([19.1176, 72.9060, 'Powai']);
+                data.addRow([4.135188510324772, -73.62181570342486, 'Parque la llanura','green'])
+                data.addRow([4.140198664504426, -73.62039864096681, 'Estadio Bello horizonte rey Pelé','green'])
+                data.addRow([4.147201500024859, -73.63294757987236, 'Teatro la Vorágine','green'])
+                data.addRow([4.145488302388137, -73.63136103836878, 'Pista de BMX','green'])
+                data.addRow([4.259234469619459, -73.56215153151601, 'Villa olimpica Restrepo','green'])
+                data.addRow([3.9910940664384227, -73.75689008013913, 'Villa olimpica Acacias','green'])
 
                 // Dibujar el mapa
                 map.draw(data, {
